@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BisLite</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body class="page">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        style="display: none;">
+        <symbol id="icon-clients" viewBox="0 0 38 32">
+            <path fill="#2aacc8"
+                d="M28.52 22.416h-2.493l-5.042-4.576c2.237-0.688 4.148-1.882 5.672-3.453l0.003-0.003v-0.992c-1.048 0.192-3.406-0.624-2.426-1.104 0.452-0.256 0.793-0.664 0.956-1.153l0.004-0.015c-0.089-0.259-0.149-0.559-0.168-0.871l-0-0.009-0.022-0.432c-0.055 0.018-0.12 0.029-0.186 0.032l-0.001 0c-0 0-0.001 0-0.002 0-0.339 0-0.614-0.275-0.614-0.614 0-0.003 0-0.007 0-0.010v0.001-1.264c0.001-0.341 0.275-0.619 0.616-0.624h0c0.019 0 0.035 0.016 0.053 0.016l-0.045-0.816c-0.018-0.137-0.028-0.295-0.028-0.456 0-2.057 1.668-3.725 3.725-3.725s3.725 1.668 3.725 3.725c0 0.161-0.010 0.319-0.030 0.474l0.002-0.018-0.046 0.816c0.019 0 0.034-0.016 0.051-0.016 0.341 0.005 0.616 0.282 0.618 0.624v1.264c0 0.002 0 0.005 0 0.008 0 0.34-0.276 0.616-0.616 0.616-0.001 0-0.001 0-0.002 0h0c-0.068-0.003-0.132-0.014-0.192-0.033l0.005 0.001-0.024 0.432c-0.026 0.363-0.104 0.701-0.226 1.016l0.008-0.024c0.174 0.456 0.495 0.822 0.903 1.051l0.010 0.005c0.96 0.464-1.24 1.248-2.328 1.12v0.976c1.646 1.698 3.73 2.962 6.070 3.61l0.095 0.022c0.933 0.707 1.599 1.724 1.846 2.896l0.006 0.032v1.472h-9.875zM22.328 11.936c-0.112-0.005-0.218-0.028-0.316-0.066l0.007 0.002-0.040 0.688c-0.118 1.881-1.153 3.497-2.659 4.418l-0.024 0.014v2.192c2.727 2.71 6.151 4.721 9.98 5.741l0.156 0.035s3.040 2.352 3.040 4.688v2.336h-32.472v-2.336c0-2.336 3.040-4.688 3.040-4.688 3.985-1.055 7.409-3.066 10.137-5.777l-0.001 0.001v-2.192c-1.533-0.934-2.569-2.55-2.687-4.416l-0.001-0.016-0.038-0.688c-0.090 0.036-0.194 0.059-0.303 0.064l-0.002 0c-0.001 0-0.003 0-0.005 0-0.557 0-1.009-0.451-1.010-1.008v-2c0.001-0.557 0.453-1.008 1.010-1.008 0.002 0 0.003 0 0.005 0h-0c0.030 0 0.056 0.016 0.085 0.016l-0.072-1.296c-0.015-0.162-0.024-0.35-0.024-0.541 0-3.371 2.733-6.104 6.104-6.104s6.104 2.733 6.104 6.104c0 0.19-0.009 0.379-0.026 0.565l0.002-0.024-0.075 1.296c0.030 0 0.054-0.016 0.085-0.016 0.001 0 0.003 0 0.005 0 0.557 0 1.009 0.451 1.010 1.008v2c-0.001 0.557-0.453 1.008-1.010 1.008-0.001 0-0.002 0-0.003 0h0z">
+            </path>
+        </symbol>
+        <symbol id="icon-comments" viewBox="0 0 33 32">
+            <path fill="#2aacc8"
+                d="M23.19 23.207l-10.669 8.793 2.4-7.917c-8.385-0.64-14.922-5.774-14.922-12.007 0-6.664 7.475-12.077 16.696-12.077s16.696 5.412 16.696 12.077c0 5.009-4.206 9.294-10.201 11.13zM16.696 2.518c-7.296 0-13.209 4.285-13.209 9.558s5.913 9.558 13.209 9.558 13.209-4.285 13.209-9.558-5.914-9.558-13.209-9.558zM10.435 11.353h12.522v2.073h-12.522v-2.073zM10.435 7.221h12.522v2.073h-12.522v-2.073zM19.839 17.544h-6.261v-2.059h6.261v2.059z">
+            </path>
+        </symbol>
+        <symbol id="icon-cursor" viewBox="0 0 19 32">
+            <path fill="#2aacc8"
+                d="M10.347 18.098l5.826 12.098-4.016 1.814-5.969-12.396-6.188 5.992v-25.606l18.691 18.098h-8.344z">
+            </path>
+        </symbol>
+        <symbol id="icon-download" viewBox="0 0 36 32">
+            <path fill="#fff"
+                d="M32.771 21.696l-1.225 6.482h-27.273l-1.224-6.482h-3.049v10.304h35.82v-10.304h-3.049zM31.997 10.177h-8.977v-3.746h-10.228v3.746h-8.89l13.954 14.587zM23.020-0.013h-10.228v1.368h10.228v-1.368zM23.020 2.544h-10.228v2.595h10.228v-2.595z">
+            </path>
+        </symbol>
+        <symbol id="icon-fullscreen" viewBox="0 0 40 32">
+            <path fill="#fff"
+                d="M31.292 31.983v-2.479h5.425v-5.118h2.797v7.597h-8.222zM36.717 2.472h-5.425v-2.472h8.222v7.597h-2.797v-5.118zM2.808 7.59h-2.797v-7.59h8.222v2.479h-5.425v5.118zM5.444 5.111h28.646v21.754h-28.653v-21.754zM8.241 24.386h23.059v-16.796h-23.059v16.796zM10.953 10.229h17.719v11.518h-17.719v-11.518zM2.816 29.504h5.425v2.479h-8.222v-7.597h2.797v5.118z">
+            </path>
+        </symbol>
+        <symbol id="icon-link" viewBox="0 0 25 32">
+            <path fill="#fff"
+                d="M24.899 7.895l-4.605 7.974c-0.464 0.791-1.31 1.314-2.278 1.314-0.485 0-0.939-0.131-1.329-0.36l0.012 0.007-1.139-0.658 1.316-2.276c0.188 0.11 0.414 0.175 0.656 0.175 0.486 0 0.911-0.264 1.138-0.656l0.003-0.006 3.289-5.697c0.11-0.188 0.176-0.414 0.176-0.655 0-0.483-0.262-0.905-0.651-1.131l-0.006-0.003-4.558-2.632c-0.19-0.112-0.418-0.178-0.661-0.178-0.482 0-0.904 0.259-1.133 0.646l-0.003 0.006-3.289 5.697c-0.11 0.189-0.176 0.416-0.176 0.659 0 0.486 0.261 0.91 0.651 1.14l0.006 0.003-1.316 2.276-1.139-0.658c-0.791-0.464-1.315-1.31-1.315-2.278 0-0.484 0.13-0.937 0.358-1.326l-0.007 0.012 4.605-7.974c0.46-0.794 1.305-1.319 2.273-1.319 0.487 0 0.944 0.133 1.334 0.365l-0.012-0.007 6.842 3.947c0.789 0.464 1.311 1.309 1.311 2.276 0 0.485-0.131 0.939-0.359 1.329l0.007-0.012zM9.333 21.697c-0.396-0.234-0.657-0.658-0.657-1.144 0-0.242 0.065-0.47 0.179-0.665l-0.003 0.006 5.263-9.118c0.233-0.392 0.654-0.65 1.135-0.65 0.727 0 1.316 0.589 1.316 1.316 0 0.239-0.064 0.463-0.175 0.657l0.003-0.006-5.263 9.118c-0.231 0.398-0.656 0.662-1.142 0.662-0.241 0-0.467-0.065-0.662-0.178l0.006 0.003zM8.37 18.105v0c-0.19-0.114-0.42-0.182-0.665-0.182-0.482 0-0.903 0.261-1.129 0.649l-0.003 0.006-3.289 5.697c-0.11 0.189-0.176 0.416-0.176 0.659 0 0.485 0.261 0.91 0.651 1.14l0.006 0.003 4.558 2.632c0.188 0.11 0.414 0.175 0.656 0.175 0.486 0 0.911-0.264 1.138-0.656l0.003-0.006 3.289-5.697c0.111-0.188 0.177-0.414 0.177-0.656 0-0.483-0.262-0.905-0.652-1.13l-0.006-0.003 1.316-2.289 1.139 0.658c0.792 0.467 1.315 1.315 1.315 2.286 0 0.485-0.131 0.94-0.359 1.331l0.007-0.013-4.605 7.974c-0.464 0.791-1.31 1.314-2.278 1.314-0.485 0-0.939-0.131-1.329-0.36l0.012 0.007-6.842-3.947c-0.791-0.464-1.315-1.31-1.315-2.278 0-0.484 0.13-0.937 0.358-1.326l-0.007 0.012 4.605-7.974c0.462-0.797 1.311-1.324 2.284-1.324 0.483 0 0.935 0.13 1.324 0.357l-0.012-0.007 1.139 0.658z">
+            </path>
+        </symbol>
+        <symbol id="icon-pen" viewBox="0 0 28 32">
+            <path
+                d="M11.172 24.933l-5.427-5.647 16.84-19.287 5.427 5.648zM8.917 27.515l-5.672-5.365 1.856-2.124 5.425 5.647zM0.008 32.015l2.313-8.588 5.679 5.359z">
+            </path>
+        </symbol>
+        <symbol id="icon-plane" viewBox="0 0 35 32">
+            <path fill="#fff"
+                d="M35.455 17.714l-12.23 3.827-15.063-13.211 11.67 14.234-13.079 4.171-6.736-26.739zM20.24 24.658v7.357l-4.298-6.081z">
+            </path>
+        </symbol>
+        <symbol id="icon-preview" viewBox="0 0 48 32">
+            <path fill="#fff"
+                d="M0.008 15.993s9.045-15.979 23.521-15.979c13.704 0 23.955 15.979 23.955 15.979s-10.337 15.979-23.955 15.979c-14.562 0-23.521-15.979-23.521-15.979v0zM23.657 8.839h0c-0.001 0-0.003 0-0.004 0-3.963 0-7.176 3.213-7.176 7.176 0 0.002 0 0.004 0 0.005v0c0.004 3.959 3.214 7.167 7.174 7.167 3.962 0 7.174-3.212 7.174-7.174 0-3.96-3.209-7.171-7.169-7.174zM23.701 12.43h0.001c-0.003 0-0.007 0-0.010 0-1.968 0-3.563 1.595-3.563 3.563 0 0 0 0 0 0v-0c0 0.002 0 0.005 0 0.007 0 1.972 1.598 3.57 3.57 3.57s3.57-1.598 3.57-3.57c0-1.971-1.597-3.568-3.567-3.57z">
+            </path>
+        </symbol>
+        <symbol id="icon-view-list" viewBox="0 0 32 32">
+            <path fill="#fff" d="M0 0h32v8h-32v-8zM0 12h32v8h-32v-8zM0 24h32v8h-32v-8z"></path>
+        </symbol>
+    </svg>
+
+    <header>
+        <nav>
+            <div class="container ">
+                <div class="row header">
+                    <div class="logo">
+                        <img src="./img/BisLite.png" alt="logo">
+                    </div>
+                    <div class="menu">
+                        <ul class="navigation list">
+                            <li class="navigation__item">home</li>
+                            <li class="navigation__item">about us</li>
+                            <li class="navigation__item dropdown"> services
+                                <ul class="dropdown__menu">
+                                    <a class="dropdown-item" href="#">Web Design</a>
+                                    <a class="dropdown-item" href="#">Wordpress Design</a>
+                                    <a class="dropdown-item" href="#">Mobile App Devplopment</a>
+                                    <a class="dropdown-item" href="#">Internet Marketing </a>
+                                    <a class="dropdown-item" href="#">Social Media Management</a>
+                                </ul>
+                            </li>
+
+                            <li class="navigation__item dropdown">portfolio
+                                <ul class="dropdown__menu">
+                                    <a class="dropdown-item" href="#">2018</a>
+                                    <a class="dropdown-item" href="#">2019</a>
+                                    <a class="dropdown-item" href="#">2020</a>
+                                </ul>
+                            </li>
+                            <li class="navigation__item">blog</li>
+                            <li class="navigation__item">contact us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="container">
+                <div class="row slider-box banner__slider">
+                    <div class="col-md-12 slide">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="slide__title">We design clean, crisp & memorable icons</p>
+                            </div>
+                            <div class="col-md-3">
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 slide">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="slide__title">We design clean, crisp & memorable icons</p>
+                            </div>
+                            <div class="col-md-3">
+                                <img class="cup" src="./img/paper-coffee-cup.png" alt="paper coffee cup">
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 slide">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="slide__title">We design clean, crisp & memorable icons</p>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-5">
+                                <img class="chat" src="./img/chat.png" alt="massage">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 slide">
+                        <div class="row">
+                            <div class="col-md-5">
+
+                            </div>
+                            <div class="col-md-4">
+                                <img class="cup" src="./img/paper-coffee-cup.png" alt="paper coffee cup">
+                            </div>
+                            <div class="col-md-3">
+                                <img class="chat" src="./img/chat.png" alt="massage">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 slide">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p class="slide__title">We design clean, crisp & memorable icons</p>
+                            </div>
+                            <div class="col-md-3">
+                                <img class="cup" src="./img/paper-coffee-cup.png" alt="paper coffee cup">
+                            </div>
+                            <div class="col-md-5">
+                                <img class="chat" src="./img/chat.png" alt="massage">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col md-3">
+                        <div class="row services__row">
+                            <div class="circle">
+                                <svg class="pen">
+                                    <use xlink:href="#icon-pen"></use>
+                                </svg>
+                            </div>
+                            <h2 class="sub">
+                                clean theme
+                            </h2>
+                        </div>
+                        <p class="text">
+                            Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis
+                            porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.
+                        </p>
+                        <p class="read-more"><a href="#">Read more</a></p>
+                    </div>
+                    <div class="col md-3">
+                        <div class="row services__row">
+                            <div class="circle">
+                                <svg class="fullscreen">
+                                    <use xlink:href="#icon-fullscreen"></use>
+                                </svg>
+                            </div>
+                            <h2 class="sub">
+                                Responsive Design
+                            </h2>
+                        </div>
+                        <p class="text">
+                            Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis
+                            porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.
+                        </p>
+                        <p class="read-more"><a href="#">Read more</a></p>
+                    </div>
+                    <div class="col md-3">
+                        <div class="row services__row">
+                            <div class="circle">
+                                <svg class="view-list">
+                                    <use xlink:href="#icon-view-list"></use>
+                                </svg>
+                            </div>
+                            <h2 class="sub">
+                                Fully layerd PSD
+                            </h2>
+                        </div>
+                        <p class="text">
+                            Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis
+                            porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.
+                        </p>
+                        <p class="read-more"><a href="#">Read more</a></p>
+                    </div>
+                    <div class="col md-3">
+                        <div class="row services__row">
+                            <div class="circle">
+                                <svg class="plane">
+                                    <use xlink:href="#icon-plane"></use>
+                                </svg>
+                            </div>
+                            <h2 class="sub">
+                                ready for coding
+                            </h2>
+                        </div>
+                        <p class="text">
+                            Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis
+                            porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.
+                        </p>
+                        <p class="read-more"><a href="#">Read more</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="works">
+            <div class="container">
+                <div class="row works-row">
+                    <div>
+                        <svg class="cursor">
+                            <use xlink:href="#icon-cursor"></use>
+                        </svg>
+                    </div>
+                    <h2 class="sub">
+                        latest works
+                    </h2>
+                </div>
+                <div class="row works__gallery">
+                    <div class="col-md-3 works__image">
+                        <img src="./img/work1.png" alt="">
+                    </div>
+                    <div class="col-md-3 works__image">
+                        <img src="./img/work2.png" alt="">
+                    </div>
+                    <div class="col-md-3 works__image">
+                        <img src="./img/work3.png" alt="">
+                    </div>
+                    <div class="col-md-3 works__image">
+                        <img src="./img/work4.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="review">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="row services__row">
+                            <div>
+                                <svg class="comment">
+                                    <use xlink:href="#icon-comments"></use>
+                                </svg>
+                            </div>
+                            <h2 class="sub">
+                                Testimonials
+                            </h2>
+                        </div>
+                        <p class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nulla sapien, at
+                            aliquam erat. Sed vitae massa tellus. Aliquam commodo aliquam metus, sed iaculis nibh tempus
+                            id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in
+                            faucibus orci luctus et ultrices posuere cubilia Curae; Etiam nec nisi in nisl euismod
+                            fringilla.
+                        </p>
+                        <p class="author text">
+                            John Travis, CEO, DomainName.com
+                        </p>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-6">
+                        <div class="row services__row">
+                            <div>
+                                <svg class="clients">
+                                    <use xlink:href="#icon-clients"></use>
+                                </svg>
+                            </div>
+                            <h2 class="sub">
+                                Our Clients
+                            </h2>
+                        </div>
+                        <div class="clients-box">
+                            <img src="./img/logo1.png" alt="logo">
+                            <img src="./img/logo2.png" alt="logo">
+                            <img src="./img/logo3.png" alt="logo">
+                            <img src="./img/logo4.png" alt="logo">
+                            <img src="./img/logo5.png" alt="logo">
+                            <img src="./img/logo6.png" alt="logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="download">
+            <div class="container">
+                <div class="row download__row">
+                    <div class="col-md-7">
+                        <p class="download__text">
+                            This is a clean and modern, four column website PSD template. You can code it into a
+                            Wordpress
+                            website, HTML5 responsive website for your personal or client works. So ahead and download
+                            this
+                            wonderful PSD template!
+                        </p>
+                    </div>
+
+                    <div class="col-md-4">
+                        <button class="btn">
+                            <div>
+                                <svg class="icon-download">
+                                    <use xlink:href="#icon-download"></use>
+                                </svg>
+                            </div>
+                            download psd
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2 class="sub footer__sub">
+                        about us
+                    </h2>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod placerat dui
+                        et tincidunt.
+                        Sed sollicitudin posuere auctor. Phasellus at ultricies nisl. Integer at leo eros. Ut nec lorem
+                        id orci convallis porta. Donec pharetra neque eu velit dictum molestie. </p>
+                </div>
+                <div class="col-md-2">
+                    <h2 class="sub footer__sub">
+                        explore
+                    </h2>
+                    <ul>
+                        <li><a href="#">Home </a> </li>
+                        <li><a href="#">About Us</a> </li>
+                        <li><a href="#">Services</a> </li>
+                        <li><a href="#">Portfolio</a> </li>
+                        <li><a href="#">Blog</a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h2 class="sub footer__sub">
+                        browse
+                    </h2>
+                    <ul>
+                        <li><a href="#">Careers</a> </li>
+                        <li><a href="#">Press & Media</a> </li>
+                        <li><a href="#">Contact Us</a> </li>
+                        <li><a href="#">Terms of Service</a> </li>
+                        <li><a href="#">Privacy Policy</a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h2 class="sub footer__sub">
+                        contact us
+                    </h2>
+                    <p><b> BisLite Inc.</b><br>
+                        Always Street 265 <br>
+                        0X - 125 - Canada</p>
+                    <a href="tel:+987-6543-210">Phone: 987-6543-210</a><br>
+                    <a href="fax:987-6543-210">Fax: 987-6543-210</a>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="sub footer__sub">
+                        connect with us
+                    </h2>
+                    <div class="row connect__row">
+                        <a href=""> <img src="./img/facebook.png" alt="facebook"></a>
+                        <a href=""> <img src="./img/dribbble.png" alt=" dribbble"></a>
+                        <a href=""><img src="./img/pinterest.png" alt="pinterest"></a>
+                    </div>
+                    <div class="row connect__row">
+                        <a href=""><img src="./img/linkedin.png" alt="linked in"></a>
+                        <a href=""><img src="./img/skype.png" alt="skype"></a>
+                        <a href=""> <img src="./img/share.png" alt="share"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row copyright__row">
+                <div class="col-md-8">
+                    <p class="text">© Copyright 2012 - BisLite Inc. All rights reserved. Some free icons used here are
+                        created by Brankic1979.com.
+                        Client Logos are copyright and trademark of the respective owners / companies. </p>
+                </div>
+                <div class="logo">
+                    <img src="./img/BisLite.png" alt="logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/main.js"> </script>
+</body>
+
+</html>

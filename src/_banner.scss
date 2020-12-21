@@ -1,0 +1,47 @@
+.banner {
+    background-color: $banner-color;
+    padding-top: 4rem;
+    padding-bottom: 0.2rem;
+}
+
+.banner__slider {
+    background-color: $slide-color;
+    min-height: 43rem;
+
+    .slide {
+        width: 100%;
+        padding-left: 5rem;
+        padding-top: 10rem;
+        display: flex;
+        justify-content: space-between;
+
+        .slide__title {
+            font-family: $Lato;
+            font-weight: 700;
+            font-size: $title_size;
+            color: white;
+        }
+
+        .cup {
+            max-height: 40rem;
+        }
+
+        .chat {
+            max-height: 40rem;
+        }
+
+    }
+}
+
+.slick-dots li {
+    margin-top: 1.5rem;
+}
+
+.slick-dots li button:before {
+    font-size: 1.5rem;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: white;
+}

@@ -1,0 +1,30 @@
+.connect__row {
+    gap: 25px;
+    padding-left: 15px;
+}
+
+
+
+.footer__sub {
+    margin-bottom: 25px;
+}
+
+footer {
+    font-size: 15px;
+    background-color: $header;
+    padding-top: 35px;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer a:hover {
+    color: $main-color;
+    text-decoration: none;
+}
+
+.copyright__row {
+    margin-top: 40px;
+    justify-content: space-around;
+}
